@@ -1,0 +1,365 @@
+@use 'hungry_hippo_theme';
+@use 'fonts';
+
+
+
+/*********************************************************
+***
+***     General Styles for All Pages
+***
+*********************************************************/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0; 
+    height: 100%; 
+    //overflow: hidden // switch off scrollbars
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    background-color:hungry_hippo_theme.$black-001;
+    border: 2px solid hungry_hippo_theme.$grey-002;
+
+    font-family: fonts.$font-stack1;
+    color: hungry_hippo_theme.$dk-002;
+}
+
+a{
+    text-decoration: none;
+    color: hungry_hippo_theme.$dk-002;
+    cursor: pointer;
+}
+a:hover,
+a:focus,
+a:target{
+    color: hungry_hippo_theme.$dk-001;
+}
+
+/* Scrollbars */
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: hungry_hippo_theme.$dk-001 hungry_hippo_theme.$lt-001;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background:hungry_hippo_theme.$lt-001;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: hungry_hippo_theme.$dk-001;
+    border-radius: 20px;
+    border: 3px solid hungry_hippo_theme.$lt-001;
+  }
+  /* end scrollbars */
+  
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+fieldset{
+  //over-ride/cancel Django/Bootstrap styles in forms
+  border: 0;
+  border-radius: 0;
+
+}
+
+// Get rid of the input number spinners
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;;
+  margin: 0;
+}
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  cursor:pointer;
+  display:block;
+  width:8px;
+  color: #333;
+  text-align:center;
+  position:relative;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/////////////////////////////////////////////////////////
+/// 
+/// Main Window Structure
+/// 
+/// /////////////////////////////////////////////////////
+
+.main-window-wrapper{
+    position: relative;
+    display: block;
+
+    top: 0;
+    left: 0;
+    width: 80rem;
+    height: 100%;
+
+    //background-color:hungry_hippo_theme.$green-001;
+    //border: 2px solid blue;
+
+    //background-repeat: repeat-x;
+    //background-position: left bottom;
+
+    overflow: hidden;
+
+}
+
+.hungry-hippo-main-flexbox{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  //background-color:hungry_hippo_theme.$grey-002;
+  //border: 5px solid hungry_hippo_theme.$red-001;
+}
+
+
+
+
+
+
+
+
+
+
+
+.workspace-area{
+    position: relative;
+    display: block;
+
+    width: 100%;
+    height: calc(100vh - 4rem); //( -4rem for the navbar height)
+
+    background-color:hungry_hippo_theme.$grey-003;
+    //border: 2px solid rgb(0, 255, 106);
+
+    overflow: hidden;
+
+}
+
+.image-container{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: calc(100vh - 11em); // == -4rem navbar and 1.5rem for slider and -5.5rem for bottom info/download panel
+
+  // padding: 2rem;
+  // background-color:hungry_hippo_theme.$red-001;
+  // border: 5px solid blue;
+  overflow: hidden;
+
+  img{
+      // Make image fit inside the container without losing aspect ratio
+      width: 100%; /* or any custom size */
+      height: 100%; 
+      object-fit: contain;
+
+  }
+
+
+}
+
+
+////////////////////////////////////////
+/// Rotation SLider
+/// ////////////////////////////////////
+.slidecontainer {
+  width: 100%;
+  height: 1.5rem;
+  //border: 2px solid hungry_hippo_theme.$red-002;
+  //background-color:green;
+
+  input{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.slider {
+  -webkit-appearance: none;
+
+  color: hungry_hippo_theme.$black-001;
+  background-color:hungry_hippo_theme.$grey-001;
+  //outline: 2px solid hungry_hippo_theme.$lt-003;
+  opacity: 0.5;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  //border: 2px solid black;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+
+  border: 2px solid hungry_hippo_theme.$dk-003;
+  border-radius: 50%;
+  background-color:hungry_hippo_theme.$grey-006;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.3rem;
+  height: 1.3rem;
+
+  border: 2px solid hungry_hippo_theme.$dk-003;
+  border-radius: 50%;
+  background-color:hungry_hippo_theme.$grey-006;
+  cursor: pointer;
+}
+
+
+////////////////////////////////////////////////////////////////
+/// 
+/// Info Panel Flex
+/// 
+/// ////////////////////////////////////////////////////////////
+
+.info-panel-flex{
+  position: relative;
+  display: flex;
+  flex-wrap: 0;
+  width: 100%;
+  height: 5.2rem; //  5.2rem instead of 5.5 to accomodate border widths
+
+  border: 1px solid hungry_hippo_theme.$dk-002;
+  background-color:hungry_hippo_theme.$dk-004;
+
+  font-size: 1rem;
+  color: hungry_hippo_theme.$lt-002;
+
+  overflow: hidden;
+
+}
+
+.info-item{
+  // flex-item;
+  height: 5.2rem;
+  padding: 0.4rem;
+  border-right: 2px solid hungry_hippo_theme.$dk-003;
+  background-color:hungry_hippo_theme.$grey-006;
+}
+
+.text{
+  display: inline;
+  white-space: nowrap;
+}
+
+.download-link-wrapper{
+  // display:flex-item;
+  width: 20rem;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+#infopanel-data{
+  // display: flex-item;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 10rem;
+}
+
+.info-row{
+  width: 100%;
+  //border-right: 2px solid hungry_hippo_theme.$dk-004;
+  //background-color:hungry_hippo_theme.$green-001;
+}
+
+
+
+
+.tag-thumb-wrapper{
+  // display: flex-item;
+  flex-basis: 5.2rem;
+  height: 5.2rem;
+  justify-content: center;
+  align-items: center;
+  //border: 2px solid hungry_hippo_theme.$black-001;
+
+}
+#tag-thumb{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+//////////////////////////////////////////////////////////////////
+/// 
+/// Zipfile Download Button Style
+/// 
+//////////////////////////////////////////////////////////////////
+.zip-download-btn{
+  display: inline-block;
+
+  text-align: center;
+  vertical-align: center;
+  width:12rem;
+  height:3rem;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 18pt;
+  line-height: 1;
+  font-weight: 700;
+
+  border: 2px solid hungry_hippo_theme.$dk-004;
+  border-radius: 0.5rem;
+
+  color: hungry_hippo_theme.$turq-003;
+  background-color: hungry_hippo_theme.$lt-002;
+
+  cursor: pointer;
+
+  transition-timing-function: cubic-bezier();
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+}
+.zip-download-btn:hover,
+.zip-download-btn:target,
+.zip-download-btn:focus{
+  color: hungry_hippo_theme.$red-002;
+  background-color: hungry_hippo_theme.$white-001;
+}
+
+
+
+
+
+
+
+
+

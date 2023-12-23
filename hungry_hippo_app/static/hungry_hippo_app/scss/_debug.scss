@@ -1,0 +1,126 @@
+
+@use 'hungry_hippo_theme';
+@use 'fonts';
+
+
+.debug-window{
+    position: absolute;
+
+    top: 7rem;
+    left: 1rem;
+
+    width: 30rem;
+    height: 15rem;
+
+    border: 2px solid hungry_hippo_theme.$black-001;
+    background-color: hungry_hippo_theme.$lt-001;
+
+    color: rgb(48, 0, 0);
+
+    z-index: 1;
+
+    #viewsize{
+        color: black;
+    }
+
+    #debug-message{
+      position: relative;
+      display: block;
+
+      width: 100%;
+    }
+
+    border: 2px solid hungry_hippo_theme.$black-001;
+    background-color: hungry_hippo_theme.$lt-001;
+
+}
+
+.cropperjs-data{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+
+    .data-col{
+        border: 2px solid hungry_hippo_theme.$black-001;
+        background-color: hungry_hippo_theme.$lt-001;
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-tag-data{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    padding: 0.2rem;
+
+    justify-content: left;
+    align-items: center;
+
+    font-size: 0.8rem;
+
+    outline: 2px solid white;
+    background-color: hungry_hippo_theme.$lt-003;
+
+    .data-col{
+
+        flex-grow: 0;
+        height: 9rem;
+        width: 10rem;
+        padding: 0.3rem;
+        border: 2px solid hungry_hippo_theme.$black-001;
+        background-color: hungry_hippo_theme.$lt-001;
+        width: 100%;
+    }
+
+    .pil-image{
+        background-color: hungry_hippo_theme.$lt-002;
+    }
+
+    .django-image{
+        color: black;
+        background-color: hungry_hippo_theme.$lt-003;
+    }
+
+}
+
+.tag-thumb-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    height: 3.4rem;
+    aspect-ratio: 1/1;
+
+    overflow: hidden;
+
+    //border: 2px solid hungry_hippo_theme.$black-001;
+
+    #tag-thumb{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+
+

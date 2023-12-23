@@ -1,0 +1,41 @@
+
+
+@use 'hungry_hippo_theme';
+@use 'fonts';
+
+.image-tag-data{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    padding: 0.2rem;
+
+    justify-content: left;
+    align-items: center;
+
+    font-size: 0.8rem;
+
+    outline: 2px solid white;
+    background-color: hungry_hippo_theme.$lt-003;
+
+    .data-col{
+
+        flex-grow: 0;
+        height: 9rem;
+        width: 10rem;
+        padding: 0.3rem;
+        border: 2px solid hungry_hippo_theme.$black-001;
+        background-color: hungry_hippo_theme.$lt-001;
+        width: 100%;
+    }
+
+    .pil-image{
+        background-color: hungry_hippo_theme.$lt-002;
+    }
+
+    .django-image{
+        color: black;
+        background-color: hungry_hippo_theme.$lt-003;
+    }
+
+}

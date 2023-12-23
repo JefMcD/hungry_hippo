@@ -1,0 +1,396 @@
+{% extends "hungry_hippo_app/main_layout.html" %}
+{% load static %}
+
+{% block title %}
+    Hungry Hippo Batch Processor
+{% endblock %}
+
+{% block hungry_hippo %}
+
+
+
+
+<div class='top-nav'>
+
+    <div class='nav-btn active' id = 'source-btn'>
+        <div class="icon-wrapper">
+            <img class="icon" src="{% static 'hungry_hippo_app/images/UI_Icons/images_folder_white.svg' %}">
+        </div>
+        <div class = "nav-label desktop">
+            Upload
+        </div>
+    </div>
+
+
+    <div class='nav-btn disable' id = 'image-btn'>
+        <div class="icon-wrapper">
+            <img class="icon" src="{% static 'hungry_hippo_app/images/UI_Icons/choose_image_white.svg' %}">
+        </div>
+        <div class = "nav-label desktop">
+            Baseimage
+        </div>
+    </div>
+
+
+    <div class='nav-btn disable' id = 'tag-btn'>
+        <div class="icon-wrapper">
+            <img class="icon" src="{% static 'hungry_hippo_app/images/UI_Icons/tag_white.svg' %}">
+        </div>
+        <div class = "nav-label desktop">
+            Tag
+        </div>
+    </div>
+
+
+    <div class='nav-btn active' id = 'action-set-btn'>
+        <div class="icon-wrapper">
+            <img class="icon" src="{% static 'hungry_hippo_app/images/UI_Icons/action_set_white.svg' %}">
+        </div>
+        <div class = "nav-label desktop">
+            Action Set
+        </div>
+    </div>
+
+
+
+    <a  href="{% url 'hungry_hippo_app:logout' %}"> 
+        <div class='nav-btn active' id = 'logout-btn'>
+            <div class="icon-wrapper">
+                <img class="icon" src="{% static 'hungry_hippo_app/images/UI_Icons/logout_white.svg' %}">
+            </div>
+            <div class = "nav-label desktop">
+                Logout
+            </div>
+        </div>
+    </a>
+
+        <!--
+    <div class='nav-btn active' id = 'crop-btn'>Reset</div>
+    <div class='nav-btn active' id = 'setData-btn'>Cropper</div>
+    <div class='nav-btn active' id = 'hide-btn'>Clear</div>
+    <div class='nav-btn active' id = 'play-btn'>Play</div>
+    -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Folder Upload Form -->
+<div class = 'form-block' id = 'source-folder-form'>
+    <div class = 'form-block-internal-container'>
+   
+        <div class = 'form-wrapper'>
+
+            <form action="#" method = 'POST' id="source-form" class='general-form' enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class='general-form-header'>Image Folder</div> 
+                {{source_folder_form.as_div}}
+                <!--
+                <input type="file" name="image_folder" id="source-folder-input" webkitdirectory directory multiple />
+                -->
+
+                <div class = "submit-btn-wrapper">
+                    <div class = 'form-btn'   id = 'source-form-cancel'>Cancel</div>
+                    <input class = "form-btn" id = 'source-form-submit' type='submit' value="OK">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Image Browser Form -->
+<div class = 'form-block' id = 'image-browser-block'>
+    <div class = 'image-browser-block-internal'>
+        <div class = 'image-browser-form-wrapper'>
+            <div class = "image-browser-form-title">Choose WorkImage</div>
+            <form action="#" method = 'POST'  class='image-browser-form' id="image-browser-form">
+                {% csrf_token %}
+                <div class = 'gallery-grid-container'>
+                    <div class = 'gallery-grid' id="user-image-uploads">
+
+                        <!-- Dynamically Created-->
+                        <!--   Gallery  Content   -->
+
+                    </div>
+                </div>
+
+                <div class = "submit-btn-wrapper">
+                    <div class = 'form-btn'   id = 'browse-image-form-cancel'>Cancel</div>
+                    <input class = "form-btn" id = 'browse-image-form-submit' type='submit' value="OK">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Action Set Form -->
+<div class = 'action-set-form-block' id = 'action-set-block'>
+    <div class = 'action-set-block-container'>
+        <div class = "action-set-form-title">Action Set</div>
+
+        <form action="#" method = 'POST'  id="action-set-form">
+            {% csrf_token %}
+
+            <div class = "action-set-form-blocks-flex">
+                    <div class = 'image-resizes-block'>
+                        <div class="action-set-title-block">Resize Images</div> 
+
+                        <div class = "resize-value-headings">
+                            <div class = "description">Crop Size</div>
+                            <div class = "width_heading">Width</div>
+                            <div class = "height_heading">Height</div>
+
+                        </div>
+
+                        <div class = "image-resize-values-container">
+                            <div class = "action-set-image-sizes-block">
+                                {{action_set_image_widths.as_div}}
+                            </div>
+            
+                            <div class = "action-set-image-sizes-block">
+                                {{action_set_image_heights.as_div}}
+                            </div>
+                        </div>
+
+                        <div class = 'quality-slider-box'>
+
+                            <div id="image-quality-heading">
+                                <div>
+                                    Image quality: 
+                                    <span class="text" id="image-quality-value">70</span>
+                                </div>
+                            </div>
+
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="100" value="70" class="quality-slider" id="quality-slider-input">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <!---
+                        In Django There seems to be no native way to render a checkbox with an image instead of text using a Django form, 
+                        so reverting to standard html to allow Styling checkboxes with images. 
+                        https://stackoverflow.com/questions/30663562/use-images-like-checkboxes/30663705 
+                    -->
+                    <div class = 'smedia-checkboxes-block'>
+
+                            <div class='action-set-checkboxes-heading'>Optimize for:</div> 
+
+                            <div class="checkbox-item">
+                                <label class='checkbox-label' for="gab-checkbox-input">
+                                    <img class='checkbox-img' src="{% static 'hungry_hippo_app/images/sm_icons/white/gab.svg' %}">
+                                    <span class='label-text desktop'>
+                                        Gab
+                                    </span>
+                                </label>
+                                <div class='checkbox-wrapper'>
+                                    <input type="checkbox" name = "gab" size = '10' class="checkbox-form-input" id="gab-checkbox-input">
+                                </div>
+                            </div>
+
+                            <div class="checkbox-item">
+
+                                <label class='checkbox-label' for="minds-checkbox-input">
+                                    <img class='checkbox-img' src="{% static 'hungry_hippo_app/images/sm_icons/white/minds.svg' %}">
+                                    <span class='label-text desktop'>
+                                        Minds
+                                    </span>
+                                </label>
+                                <div class='checkbox-wrapper'>
+                                    <input type="checkbox" name = "minds" class="checkbox-form-input" id="minds-checkbox-input">
+                                </div>
+                            </div>
+
+                            <div class="checkbox-item">
+
+                                <label class='checkbox-label' for="telegram-checkbox-input">
+                                    <img class='checkbox-img' src="{% static 'hungry_hippo_app/images/sm_icons/white/telegram.svg' %}">
+                                    <span class='label-text desktop'>
+                                        Telegram
+                                    </span>
+                                </label>
+                                <div class='checkbox-wrapper'>
+                                    <input type="checkbox" name = "telegram" class="checkbox-form-input" id="telegram-checkbox-input">
+                                </div>
+
+                            </div>
+                        
+                            <div class="checkbox-item">
+                                <label class='checkbox-label' for="x-checkbox-input">
+                                    <img class='checkbox-img' src="{% static 'hungry_hippo_app/images/sm_icons/white/x.svg' %}">
+                                    <span class='label-text desktop'>
+                                        X
+                                    </span>
+                                </label>
+                                <div class='checkbox-wrapper'>
+                                    <input type="checkbox" name = "x" class="checkbox-form-input" id="x-checkbox-input">
+                                </div>
+
+                            </div>
+
+                                                            
+                            <div class="checkbox-item">
+                                <label class='checkbox-label' for="facebook-checkbox-input">
+                                    <img class='checkbox-img' src="{% static 'hungry_hippo_app/images/sm_icons/white/fb.svg' %}">
+                                    <span class='label-text desktop'>
+                                        Fb
+                                    </span>
+                                </label>
+                                <div class='checkbox-wrapper'>
+                                    <input type="checkbox" name = "fb" class="checkbox-form-input" id="facebook-checkbox-input">
+                                </div>
+
+                            </div>
+
+                    </div>
+
+                    <div class = 'smedia-checkboxes-block'>
+
+                        <div class='action-set-checkboxes-heading'>Include:</div> 
+
+                        <div class="checkbox-item">
+                            <label class='checkbox-label ' for="square-format-input">
+                                <span class='plain-label-text'>
+                                    Square Format
+                                </span>
+                            </label>
+                            <div class='checkbox-wrapper'>
+                                <input type="checkbox" name = "square"  class="checkbox-form-input" id="square-format-input">
+                            </div>
+                        </div>
+
+                        <div class='action-set-checkboxes-heading'>Tag Positon:</div> 
+                        <div class = "action-set-tag-placement-block">
+                            {{tag_placement.as_div}}
+                        </div>
+                    </div>
+            </div>
+
+            <div class = "action-set-submit-btn-wrapper">
+
+                <div class='action-set-form-btn ' id = 'close-action-set-form'>
+                    <div class="action-set-icon-wrapper">
+                        <img class="action-set-icon  desaturate" src="{% static 'hungry_hippo_app/images/UI_Icons/return_white.svg' %}">
+                    </div>
+                </div>
+
+                <div class='action-set-form-btn disable' id = 'play-btn'>
+                    <div class="action-set-icon-wrapper">
+                        <img class="action-set-icon" src="{% static 'hungry_hippo_app/images/UI_Icons/play_white.svg' %}">
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+        
+    </div>
+</div>
+<!-- End ActionSet Form Block-->
+
+
+
+<!-- Tag Upload Form -->
+<div class = 'form-block' id = 'tag-form-block'>
+    <div class = 'form-block-internal-container'>
+   
+        <div class = 'form-wrapper'>
+
+            <form action="#" method = 'POST' id="tag-form" class='general-form' enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class='general-form-header'>Choose Tag</div> 
+                {{tag_form.as_div}}
+        
+                <div class = "submit-btn-wrapper">
+                    <div class = 'form-btn' id = 'tag-form-cancel'>Cancel</div>
+                    <input class = "form-btn" id='tag-form-submit' type='submit' value="OK">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="workspace-area">
+
+    <div class = 'image-container'>
+        <img id = 'cropper-image' src="{{work_image}}">
+    </div>
+
+    <div class="slidecontainer">
+        <input type="range" min="-180" max="180" value="0" class="slider" id="slider-range">
+    </div>
+
+    <div class = 'info-panel-flex'>
+
+            <div class = 'download-link-wrapper  info-item '>
+                <div class = "" id="download-link">
+                    No Images Uploaded Yet!
+                </div>
+                <div class = "">
+                    <span>Baseimage:</span> 
+                    <span id="baseimage-name">Hungry Hippo</span>
+                </div>
+
+            </div>
+
+
+            <div class = "info-item" id= "infopanel-data">
+
+                    <div class = "info-row">
+                        <span class = 'text'>Tag: </span>
+                        <span class = 'text' id = "tag-name">No Tag Uploaded</span>
+                    </div>
+
+                    <div class = "info-row">
+                        <span class = 'text'>Zipfile: </span>
+                        <span class = 'text' id = 'zip-name'>No files processed</span>
+                    </div>
+ 
+            </div>
+
+
+
+            <div class = 'tag-thumb-wrapper info-item '>
+                    <img src="" id='tag-thumb'>
+            </div>
+    
+
+        </div>
+
+</div>
+
+  
+
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'hungry_hippo_app/javascript/cropperjs/node_modules/cropperjs/dist/cropper.js' %}"></script>
+    <script src="{% static 'hungry_hippo_app/javascript/hungry_hippo_app.js' %}"></script>
+    <script src="{% static 'hungry_hippo_app/javascript/action_set_form.js' %}"></script>
+    <script src="{% static 'hungry_hippo_app/javascript/tag_image.js' %}"></script>
+{% endblock %}
+

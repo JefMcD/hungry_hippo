@@ -1,0 +1,95 @@
+
+
+
+<!--
+    <div class='debug-window'>
+        <p id="viewsize"></p>
+    
+        <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        
+        var x = document.getElementById("viewsize");
+        x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+        </script>
+
+
+        <div class = "cropperjs-data crop-box">
+            <div class = 'data-col'>
+                <div>x-offeset: <span id='crop-box-x-offset'></span></div>
+                <div>y-offset: <span id='crop-box-y-offset'></span></div>
+                <div>crop width: <span id='crop-box-width'></span></div>
+                <div>crop height: <span id='crop-box-height'></span></div>
+                <div>crop rotation: <span id='crop-box-rotation'></span></div>
+            </div>
+
+        </div>
+
+        <div class='debug-msg'>
+            {{debug_message|safe}}
+        </div>
+    </div>
+-->
+
+
+<!--
+    <div class = "cropperjs-data">
+        <div class = 'data-col'>
+            <div>x-offeset: <span id='crop-box-x-offset'>0</span></div>
+            <div>y-offset: <span id='crop-box-y-offset'>0</span></div>
+        </div>
+
+        <div class = 'data-col'>
+            <div>crop width: <span id='crop-box-width'>0</span></div>
+            <div>crop height: <span id='crop-box-height'>0</span></div>
+        </div>
+
+        <div class = 'data-col'>
+            <div>Slider Value: <span id = 'slider-value'>0</span></div>
+            <div>crop rotation: <span id='crop-box-rotation'>0</span></div>
+        </div>
+
+        <div class = 'data-col'>
+            <div>Image Tag: 
+                <div id = 'tag-area'>No Tag Uploaded</div>
+            </div>
+        </div>    
+    </div>
+-->
+
+
+<div class = "image-tag-data">
+    <div class = 'data-col pil-image'>
+        <div><b>PIL 1:</b> <span id='pil-data1'>0</span></div>
+        <div><B>PIL 2:</b> <span id='pil-data2'>0</span></div>
+    </div>
+
+    <div class = 'data-col pil-image'>
+        <div><b>PIL 3:</b> <span id='pil-data3'>0</span></div>
+        <div><b>PIL 4:</b> <span id='pil-data4'>0</span></div>
+    </div>
+
+    <div class = 'data-col django-image'>
+        <div><b>django name:</b> <div id='django-name'>0</div></div>
+        <div><b>django path:</b> <div id='django-path'>0</div></div>
+    </div>
+
+    <div class = 'data-col django-image'>
+        <div><b>url:</b> <div id='django-url'>0</div></div>
+        <div><b>abs-path:</b> <div id='django-abs-path'>0</div></div>
+    </div>
+
+
+    <div class = 'data-col'>
+        <div>Image Tag: 
+            <div id = 'tag-area'>None</div>
+        </div>
+    </div>
+    <div class = 'data-col'>
+        <div class="tag-thumb-wrapper">
+            <img src="" id="tag-thumb">
+        </div>
+    </div>
+
+    
+</div>

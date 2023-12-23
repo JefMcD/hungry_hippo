@@ -1,0 +1,38 @@
+
+
+{% extends "hungry_hippo_app/authenticate_layout.html" %}
+
+{% block authenticate_panel %}
+
+    <div class="login-page-wrapper">
+        <div class="login-title">
+            Register
+        </div>
+
+
+
+        <div class="register-form-wrapper">
+            <form class='regsier-form' action="{% url 'hungry_hippo_app:register' %}" method="post">
+                {% csrf_token %}
+                <input class="authentication-form-input" autofocus type="text" name="username" placeholder="Username">
+                <input class="authentication-form-input" type="email" name="email" placeholder="Email Address">
+                <input class="authentication-form-input" type="password" name="password" placeholder="Password">
+                <input class="authentication-form-input" type="password" name="confirmation" placeholder="Confirm Password">
+                <input class = "login-btn" type="submit" value="Register">
+            </form>
+
+            {% if message %}
+                <div class="login-message">{{ message }}</div>
+            {% endif %}
+        </div>
+
+        <div class="authenticate-redirect">
+            <div>Already have an account?</div>
+            <div> <a href="{% url 'hungry_hippo_app:login' %}">Log In here.</a></div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+

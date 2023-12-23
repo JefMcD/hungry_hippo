@@ -1,0 +1,13 @@
+{% load static %}
+
+
+
+        {% for image in images%}
+            <div class="gallery-grid-item">                
+
+                <label for = "{{image.file_id}}" class="gallery-image-label">
+                    <input type="radio" class = "gallery-browser-input" id = "{{image.file_id}}" name = "images" value = "{{image.image_file.url}}" data-imagename={{image.image_file.name}}>
+                    <img class="gallery-image" src="{{image.image_file.url}}">
+                </label>
+            </div>
+        {% endfor %}

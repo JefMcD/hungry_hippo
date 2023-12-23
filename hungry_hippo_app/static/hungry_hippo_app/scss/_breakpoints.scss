@@ -1,0 +1,83 @@
+
+
+
+// All Screen Sizes between 0 and 499
+@media only screen and (min-width:0px) and (max-width:499px){    // Tiny Mobile Devices (Below Browser Minimum of 500px)
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    /////////////////////////////////////////////////
+    .desktop{
+        display: none;
+    }
+
+    .top-nav .nav-btn{
+        width: 3rem
+    }
+
+    .label-text{
+        display: none;
+    }
+
+    .label-text.desktop{
+        display: none;
+    }
+} 
+
+
+
+
+// All Screen Sizes between 500 and 749px
+@media only screen and (min-width:500px) and (max-width:749px){    // Mobile Devices
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    /////////////////////////////////////////////////
+    .desktop{
+        display: none;
+    }
+
+    .top-nav .nav-btn{
+        width: 3rem
+    }
+
+    .label-text{
+        display: none;
+    }
+
+    .label-text.desktop{
+        display: none;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+// All Screen Sizes between 750 and 879
+@media only screen and (min-width:750px) and (max-width:879px){    // large Mobile
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    //////////////////////////////////////////////////
+    .desktop{
+        display: none;
+    }
+
+    .top-nav .nav-btn{
+        width: 3rem
+    }
+
+} 
+
+
+

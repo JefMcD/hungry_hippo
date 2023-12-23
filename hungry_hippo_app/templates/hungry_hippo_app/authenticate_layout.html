@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="#">
+        <title>{% block title %}Authentication{% endblock %}</title>
+         <link href="{% static 'hungry_hippo_app/css/style.css' %}" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class='main-window-wrapper'>
+
+            <div class = "hungry-hippo-main-flexbox">
+
+                <div class="authenticate-main-wrapper">
+
+                    <div class = "authenticate-logo-wrapper">
+                        <img src="{% static 'hungry_hippo_app/images/logos/panda1.jpg' %}">
+                    </div>
+            
+                    <div class = "site-enerjon">
+                        <div class="hungry-hippo-app-title">Hungry Hippo</div>
+                        <div class="tagline">Image Batch Processor</div>
+                    </div>
+
+                    {% block authenticate_panel %}
+                    {% endblock %}
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

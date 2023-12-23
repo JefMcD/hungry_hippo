@@ -1,0 +1,24 @@
+
+{% extends "hungry_hippo_app/authenticate_layout.html" %}
+{% load static %}
+
+{% block title %}
+    hungry_hippo_app Authentication
+{% endblock %}
+
+{% block authenticate_panel %}
+
+
+
+        <div class = "authenticate-login-wrapper">
+            <a href="{% url 'hungry_hippo_app:login' %}"> 
+                <div class = "login-btn authenticate-btn" id = 'login-btn'>Login</div>
+            </a>
+        
+            <a href="{% url 'hungry_hippo_app:register' %}">
+                <div class = "login-btn authenticate-btn" id = 'register-btn'>Register</div>
+            </a>
+        </div>
+
+
+{% endblock %}

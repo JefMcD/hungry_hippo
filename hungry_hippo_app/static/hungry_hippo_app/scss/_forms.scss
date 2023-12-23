@@ -1,0 +1,600 @@
+@use 'hungry_hippo_theme';
+@use 'fonts';
+
+/////////////////////////////////////////////////////////////////
+/// 
+/// Authentication Forms
+/// 
+/////////////////////////////////////////////////////////////////
+
+.std-form-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 16rem;
+    padding: 1rem;
+
+    margin: auto;
+
+    color: hungry_hippo_theme.$black-001;
+    //border: 2px solid hungry_hippo_theme.$dk-002;
+    //background-color: hungry_hippo_theme.$white-001;
+
+}
+
+.login-form-wrapper{
+    position: relative;
+    display: block;
+    height: 18rem;
+
+    margin: 0;
+    padding: 0;
+
+    color: hungry_hippo_theme.$black-001;
+    //border: 2px solid hungry_hippo_theme.$dk-002;
+    //background-color: yellow;
+
+}
+
+
+.login-form{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 14rem;
+    margin: 0;
+    padding: 0;
+
+    color: hungry_hippo_theme.$black-001;
+    //border: 2px solid hungry_hippo_theme.$dk-002;
+    //background-color: blue;
+}
+.authentication-form-input{
+    display: inline-block;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.register-form-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 23rem;
+
+    margin: 0;
+    padding: 0;
+
+    color: hungry_hippo_theme.$black-001;
+    //border: 2px solid hungry_hippo_theme.$dk-002;
+    //background-color: yellow;
+
+}
+
+.register-form{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 20rem;
+    margin: 0;
+    padding: 0;
+
+    color: hungry_hippo_theme.$black-001;
+    //border: 2px solid hungry_hippo_theme.$dk-002;
+    //background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
+/// 
+/// General Form
+///
+////////////////////////////////////////////////// 
+.form-block{
+    position: absolute;
+    display: none;
+    
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    max-width: 30rem;
+    height: 15rem;
+    margin: auto;
+    
+    //border: 2px solid red;
+    //background-color: hungry_hippo_theme.$red-001;
+    z-index: 1;
+}
+
+
+    
+.form-block-internal-container{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 15rem;
+    
+    padding: 1rem;
+    
+    //border: 2px solid black;
+    //background-color: hungry_hippo_theme.$white-001;
+    
+    z-index: 1;
+    
+}
+    
+.form-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 13rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    background-color: hungry_hippo_theme.$dk-001;
+    
+}
+    
+    
+.general-form{
+    position: relative;
+    display: block;
+
+    width: 100%;
+    height: 13rem;
+    padding: 1rem;
+
+    //border: 2px solid hungry_hippo_theme.$dk-004;
+    //border-radius: 0.5rem;;
+    //background-color:hungry_hippo_theme.$red-001;
+    
+    .general-form-header{
+        color: hungry_hippo_theme.$white-001;
+        font-size: 16pt;
+        margin-bottom: 0.5rem;
+
+        //border-radius: 0.5rem;;
+        //background-color:purple;
+    }
+    
+    
+    label{
+        display: inline-block;
+        width: 4.5rem;
+        height: 3rem;
+        padding: 0.5rem;
+        font-family: inherit;
+        font-size: 12pt;
+        text-align: left;
+        color: hungry_hippo_theme.$dk-004;
+        //border: 2px solid black;
+
+        margin: 0;
+    }
+    
+    input{
+        display: inline-block;
+    }
+}
+    
+    
+.source-folder-input{
+      display: inline-block;
+      width: calc(100% - 5.5rem);
+      height: 3rem;
+      padding: 0.5rem;
+      margin-left: 0.5rem;
+    
+      border: 2px solid hungry_hippo_theme.$dk-002;
+      border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+/// 
+///     Image Browser Form
+/// 
+/// 
+///////////////////////////////////////////////////////////////
+
+#image-browser-block{
+    height: 30rem;
+    max-width: 52rem;
+    width: 100%;
+
+    //color: hungry_hippo_theme.$dk-004;
+    //background-color:purple;
+    //border: 2px solid black;
+}
+.image-browser-block-internal{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    padding: 1rem;
+    
+   // color: hungry_hippo_theme.$dk-004;
+   // border: 2px solid black;
+    //background-color: hungry_hippo_theme.$white-001;
+    
+    z-index: 1;
+}
+
+.image-browser-form-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 30rem;
+    padding: 1rem;
+
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    color: hungry_hippo_theme.$dk-004;
+    background-color: hungry_hippo_theme.$dk-001;
+
+}
+.image-browser-form-title{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2rem;
+    padding: 0rem;
+
+    //border: 2px solid black;
+    //border-radius: 1.5rem;
+    // background-color: hungry_hippo_theme.$dk-001;
+    color: hungry_hippo_theme.$lt-001;
+    font-size: 16pt;
+    font-family: fonts.$font-stack1;
+
+}
+.image-browser-form{
+    display: block;
+    height: 23rem;
+    color: hungry_hippo_theme.$lt-002;
+    background-color: hungry_hippo_theme.$grey-006;
+    border: 2px solid  hungry_hippo_theme.$lt-004;
+    padding: 0rem;
+
+
+    
+    .gallery-image-label{
+        display: inline-block;
+        width: 10rem;
+        height: 10rem;
+        text-align: center;
+        //color: hungry_hippo_theme.$dk-004;
+        //outline: 2px solid blue;
+        
+        .gallery-browser-input{
+            display: inline-block;
+            accent-color: hungry_hippo_theme.$dk-002;
+        }
+
+        .gallery-image{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    
+    }
+
+    /* HIDE RADIO */
+    .gallery-grid-item  [type=radio] { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    /* IMAGE STYLES */
+    .gallery-grid-item  [type=radio] + img {
+        cursor: pointer;
+    }
+    
+    /* CHECKED STYLES */
+    .gallery-grid-item [type=radio]:checked + img{
+        outline: 2px solid hungry_hippo_theme.$lt-002;
+
+    }
+}
+
+
+.gallery-grid-container{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    padding: 0.5rem;
+
+    overflow: auto;
+}
+.gallery-grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+
+    align-items: center;
+    justify-content: space-around;
+
+}
+.gallery-grid-item{
+    display: flex;
+    background-color: hungry_hippo_theme.$dk-004;
+    border: 2px solid  hungry_hippo_theme.$dk-003;
+    width: 100%;
+    height: 12rem;
+    align-items: center;
+    justify-content: space-around;
+
+    transition-property: transform background-color;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier();
+
+}
+
+.gallery-grid-item:focus-within{
+    background-color:  hungry_hippo_theme.$lt-003;
+    transform: scale(0.9);
+
+}
+.gallery-grid-item:hover,
+.gallery-grid-item:focus,
+.gallery-grid-item:target{
+    background-color:  hungry_hippo_theme.$dk-001;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////
+/// 
+/// General Form Button Style
+/// 
+//////////////////////////////////////////////////////////////////
+.form-btn{
+    display: inline-block;
+
+    text-align: center;;
+    width: 5rem;
+    height:2rem;
+    margin-right: 0.5rem;
+    padding-bottom: 0.3rem;
+    font-size: 14pt;
+
+    border: 2px solid hungry_hippo_theme.$dk-004;
+    border-radius: 0.5rem;
+
+    color: hungry_hippo_theme.$dk-004;
+    background-color: hungry_hippo_theme.$lt-002;
+
+    cursor: pointer;
+
+    transition-timing-function: cubic-bezier();
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+}
+.form-btn:hover,
+.form-btn:target,
+.form-btn:focus{
+    color: hungry_hippo_theme.$red-002;
+    background-color: hungry_hippo_theme.$white-001;
+}
+
+.form-btn.disable{
+    color:hungry_hippo_theme.$lt-003;
+    background-color:hungry_hippo_theme.$dk-001;
+
+    cursor:auto;
+}
+
+
+
+
+
+
+
+//////////////////////////////////////
+/// 
+/// General form INPUT styles
+/// 
+///////////////////////////////////////
+.general-form-input{
+    display: inline-block;
+    width: calc(100% - 5.5rem);
+    height: 3rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+
+    border: 2px solid hungry_hippo_theme.$dk-002;
+    border-radius: 0.5rem;
+}
+
+
+    
+    
+    
+////////////////////////////////////////////////////////////////
+/// 
+/// CSS Syling the Choose File Button 
+/// on a Form Image Input
+/// https://nikitahl.com/custom-styled-input-type-file
+///
+////////////////////////////////////////////////////////////////
+
+.choose-file-btn{
+    display: inline-block;
+    padding: 0.4rem;
+    height: 3rem;
+    aspect-ratio: 1/1;
+    color: white;
+   // background-color: green;
+    cursor: pointer;
+}
+
+.choose-file-btn input[type="file"]{
+    display: none;
+}
+    
+input[type=file] {
+    width: 350px;
+    max-width: 100%;
+    font-family: inherit;
+    color:hungry_hippo_theme.$dk-004;
+    padding: 5px;
+    background-color:hungry_hippo_theme.$lt-003;
+    border-radius: 10px;
+    border: 1px solid hungry_hippo_theme.$dk-003;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background-color: hungry_hippo_theme.$lt-002;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: hungry_hippo_theme.$purple-002;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+    background:hungry_hippo_theme.$white-001;
+    color:  hungry_hippo_theme.$red-003;
+}
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////
+/// 
+/// General Form Submit Button Styles
+/// 
+///////////////////////////////////////////////////////////
+.submit-btn-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin-top: 0.5rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

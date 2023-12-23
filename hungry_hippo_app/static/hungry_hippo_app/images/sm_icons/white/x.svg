@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg382"
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   sodipodi:docname="twitter.svg"
+   inkscape:export-filename="../../../../../../../courses/CS50/Capstone/hungry_hippo/hungry_hippo_app/static/hungry_hippo_app/images/sm_icons/x.svg"
+   inkscape:export-xdpi="34.560001"
+   inkscape:export-ydpi="34.560001"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs386" /><sodipodi:namedview
+     id="namedview384"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     showguides="true"><sodipodi:guide
+       position="168.73488,155.25682"
+       orientation="0,-1"
+       id="guide1662"
+       inkscape:locked="false" /><sodipodi:guide
+       position="157.35949,39.986252"
+       orientation="0,-1"
+       id="guide1664"
+       inkscape:locked="false" /></sodipodi:namedview><g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g388"><rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#fefefe;stroke-width:10;stroke-dasharray:none;stroke-opacity:1"
+       id="rect470"
+       width="191.74123"
+       height="189.19156"
+       x="4.6308284"
+       y="5.879354"
+       rx="29.131887"
+       ry="24.946558" /><path
+       style="fill:#ffffff;stroke-width:0.132113"
+       d="m 44.346198,160.17551 c 0.05631,-0.0917 9.998485,-11.66638 22.093627,-25.7215 12.09513,-14.05512 21.991157,-25.62121 21.991157,-25.70241 0,-0.13262 -4.81116,-7.15238 -35.473741,-51.758147 -4.782763,-6.957629 -8.695936,-12.679762 -8.695936,-12.715852 0,-0.0361 7.567878,-0.06557 16.817503,-0.06557 H 77.8963 l 14.317894,20.840775 c 7.874826,11.462433 14.471086,21.062449 14.658346,21.333389 0.18726,0.27093 0.37615,0.493866 0.41975,0.495423 0.0744,0.0032 3.66477,-4.158684 27.32365,-31.668604 l 9.45652,-10.995784 4.929,-0.0021 c 3.36893,-0.0021 4.9022,0.04073 4.84435,0.134349 -0.0465,0.07536 -9.50939,11.08856 -21.02853,24.473873 -11.51914,13.385313 -20.97168,24.406999 -21.00564,24.492618 -0.034,0.08567 10.25768,15.16922 22.87031,33.5191 12.61264,18.34987 22.93206,33.39516 22.93206,33.43396 0,0.0388 -7.56681,0.0705 -16.81512,0.0705 h -16.81512 l -15.45853,-22.49216 c -8.5022,-12.37071 -15.522475,-22.49219 -15.600643,-22.49219 -0.0782,0 -8.838537,10.10661 -19.4675,22.45915 l -19.325393,22.45916 -4.943983,0.0346 c -3.95343,0.0277 -4.923459,0.001 -4.841523,-0.13212 z m 99.622092,-7.14352 c -0.0365,-0.0951 -8.73157,-12.56493 -19.32237,-27.71064 C 91.23624,77.542765 82.512466,65.065721 77.911487,58.480165 75.449389,54.956052 73.363258,51.997899 73.275639,51.906481 73.150478,51.775879 71.468195,51.747567 65.425413,51.774363 l -7.690934,0.0341 6.514819,9.313941 c 6.01847,8.604339 15.103318,21.596141 42.911972,61.366356 5.84289,8.35612 13.0603,18.6839 16.03872,22.95061 l 5.41528,7.75764 7.7097,0.004 c 6.30101,0.003 7.69757,-0.0277 7.64332,-0.16901 z"
+       id="path1" /></g></svg>

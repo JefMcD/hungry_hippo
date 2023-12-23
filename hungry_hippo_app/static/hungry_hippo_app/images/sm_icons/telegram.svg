@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg382"
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   sodipodi:docname="gabber.png"
+   inkscape:export-filename="../../gabber.svg"
+   inkscape:export-xdpi="34.560001"
+   inkscape:export-ydpi="34.560001"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs386" /><sodipodi:namedview
+     id="namedview384"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     showguides="true"><sodipodi:guide
+       position="168.73488,155.25682"
+       orientation="0,-1"
+       id="guide1662"
+       inkscape:locked="false" /><sodipodi:guide
+       position="157.35949,39.986252"
+       orientation="0,-1"
+       id="guide1664"
+       inkscape:locked="false" /></sodipodi:namedview><g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g388"><rect
+       style="fill:none;stroke:#d4aa00;stroke-width:10;stroke-dasharray:none"
+       id="rect470"
+       width="191.74123"
+       height="189.19156"
+       x="4.5230589"
+       y="5.8685374"
+       rx="29.131887"
+       ry="24.946558" /><g
+       style="fill:#3771c8"
+       id="g5810"
+       transform="matrix(6.7368911,0,0,6.7368911,47.611287,49.561261)"><path
+         d="M 16,8 A 8,8 0 1 1 0,8 8,8 0 0 1 16,8 Z M 8.287,5.906 C 7.509,6.23 5.953,6.9 3.621,7.916 3.243,8.066 3.044,8.214 3.026,8.358 2.996,8.601 3.301,8.697 3.716,8.828 L 3.891,8.883 C 4.299,9.016 4.849,9.171 5.134,9.177 5.394,9.183 5.683,9.077 6.002,8.857 8.181,7.386 9.306,6.643 9.376,6.627 9.426,6.615 9.496,6.601 9.542,6.643 9.589,6.684 9.584,6.763 9.579,6.784 9.549,6.913 8.352,8.025 7.733,8.601 7.54,8.781 7.403,8.908 7.375,8.937 A 8.154,8.154 0 0 1 7.187,9.123 c -0.38,0.366 -0.664,0.64 0.015,1.088 0.327,0.216 0.589,0.393 0.85,0.571 0.284,0.194 0.568,0.387 0.936,0.629 0.093,0.06 0.183,0.125 0.27,0.187 0.331,0.236 0.63,0.448 0.997,0.414 0.214,-0.02 0.435,-0.22 0.547,-0.82 0.265,-1.417 0.786,-4.486 0.906,-5.751 A 1.426,1.426 0 0 0 11.695,5.126 0.337,0.337 0 0 0 11.581,4.909 0.526,0.526 0 0 0 11.271,4.816 c -0.3,0.005 -0.763,0.166 -2.984,1.09 z"
+         id="path5801"
+         style="fill:#3771c8" /></g></g></svg>

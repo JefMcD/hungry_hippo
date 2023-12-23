@@ -1,0 +1,20 @@
+
+$font-stack1: gothic, Arial, sans-serif;
+$font-stack2: eras-std, serif;
+$logo-font: hungry-panda, Arial, sans-serif;
+
+@font-face{
+    font-family: eras-std;
+    src: url('../fonts/woff/ERASDEMI.woff2');
+}
+
+@font-face{
+    font-family:gothic;
+    src: url('../fonts/ttf/GOTHIC.ttf')
+}
+
+
+@font-face{
+    font-family:hungry-panda;
+    src: url('../fonts/ttf/Voodoo_Doll.ttf')
+}

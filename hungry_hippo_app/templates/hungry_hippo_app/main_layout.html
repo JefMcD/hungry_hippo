@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+        <link href="{% static 'hungry_hippo_app/css/style.css' %}" rel="stylesheet">
+        <link  href="{% static 'hungry_hippo_app/javascript/cropperjs/node_modules/cropperjs/dist/cropper.min.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <div class='main-window-wrapper'>
+            {% block hungry_hippo %}
+            {% endblock %}
+    </div>
+
+</body>
+</html>
+
+{% block script %} 
+
+{% endblock %}
